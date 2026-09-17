@@ -25,4 +25,12 @@ public class MainActivity extends AppCompatActivity {
         viewCanvas.inicializarObjetosVerde();
     }
 
+    public void corAzul(View view){
+        viewCanvas.inicializarObjetosAzul();
+    }
+
+    public void corVermelha(View view){
+        viewCanvas.inicializarObjetosVermelha();
+    }
+
 }

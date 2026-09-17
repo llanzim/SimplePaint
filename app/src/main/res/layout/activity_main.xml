@@ -23,7 +23,15 @@
         android:layout_height="wrap_content"
         android:text="@string/corVerde"
         android:onClick="corVerde"/>
-
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Azul"
+        android:onClick="corAzul"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vermelho"
+        android:onClick="corVermelha"/>
 
 </LinearLayout>
