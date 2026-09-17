@@ -45,8 +45,14 @@ public class Estilo {
         return estiloLinha;
     }
 
-
-
-
+    public static Paint getEstilosParaLinhaBranca(){
+        Paint estiloLinha = new Paint();
+        estiloLinha.setAntiAlias(true);
+        estiloLinha.setColor(Color.WHITE);
+        estiloLinha.setStyle(Paint.Style.STROKE);
+        estiloLinha.setStrokeWidth(10f);
+        estiloLinha.setStrokeJoin(Paint.Join.ROUND);
+        return estiloLinha;
+    }
 
 }

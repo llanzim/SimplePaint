@@ -27,7 +27,15 @@ public class ViewCanvas extends View {
 
     public void inicializaObjetos(){
         path = new Path();
-        linha = new Linha(getContext(), path);
+        Paint paint = Estilo.getEstilosParaLinhaBranca();
+        linha = new Linha(getContext(), path, paint);
+    }
+
+    public void inicializarObjetosMagenta(){
+        linhas.add(linha);
+        path = new Path();
+        Paint paint = Estilo.getEstilosParaLinha();
+        linha = new Linha(getContext(), path, paint);
     }
 
     public void inicializarObjetosVerde(){
@@ -48,6 +56,13 @@ public class ViewCanvas extends View {
         linhas.add(linha);
         path = new Path();
         Paint paint = Estilo.getEstilosParaLinhaVermelha();
+        linha = new Linha(getContext(), path, paint);
+    }
+
+    public void inicializarObjetosBranca(){
+        linhas.add(linha);
+        path = new Path();
+        Paint paint = Estilo.getEstilosParaLinhaBranca();
         linha = new Linha(getContext(), path, paint);
     }
 

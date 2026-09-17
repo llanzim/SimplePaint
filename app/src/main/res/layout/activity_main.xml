@@ -34,4 +34,16 @@
         android:text="Vermelho"
         android:onClick="corVermelha"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Magenta"
+        android:onClick="corMagenta"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Branco"
+        android:onClick="corBranca"/>
+
 </LinearLayout>

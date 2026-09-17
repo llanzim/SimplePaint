@@ -20,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
         viewCanvas.limparCanvas();
         viewCanvas.inicializaObjetos();
     }
+
+    public void corMagenta(View view){
+        viewCanvas.inicializarObjetosMagenta();
+    }
+
     public void corVerde(View view){
         //viewCanvas.limparCanvas();
         viewCanvas.inicializarObjetosVerde();
@@ -33,4 +38,7 @@ public class MainActivity extends AppCompatActivity {
         viewCanvas.inicializarObjetosVermelha();
     }
 
+    public void corBranca(View view){
+        viewCanvas.inicializarObjetosBranca();
+    }
 }
