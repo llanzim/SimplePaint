@@ -8,7 +8,7 @@ import android.graphics.Path;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-
+import java.util.ArrayList;
 import androidx.annotation.Nullable;
 
 public class ViewCanvas extends View {
@@ -19,6 +19,7 @@ public class ViewCanvas extends View {
     private float fixoX, fixoY, eixoX, eixoY;
     private int TOLERANCIA_MOVIMENTO = 5;
     private Linha linha;
+    private ArrayList<Linha> linhas = new ArrayList<>();
     public ViewCanvas(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         inicializaObjetos();
@@ -30,18 +31,21 @@ public class ViewCanvas extends View {
     }
 
     public void inicializarObjetosVerde(){
+        linhas.add(linha);
         path = new Path();
         Paint paint = Estilo.getEstilosParaLinhaVerde();
         linha = new Linha(getContext(), path, paint);
     }
 
     public void inicializarObjetosAzul(){
+        linhas.add(linha);
         path = new Path();
         Paint paint = Estilo.getEstilosParaLinhaAzul();
         linha = new Linha(getContext(), path, paint);
     }
 
     public void inicializarObjetosVermelha(){
+        linhas.add(linha);
         path = new Path();
         Paint paint = Estilo.getEstilosParaLinhaVermelha();
         linha = new Linha(getContext(), path, paint);
@@ -71,6 +75,7 @@ public class ViewCanvas extends View {
     }
 
     public void limparCanvas(){
+        linhas.clear();
         path.reset();
         invalidate();
     }
@@ -78,6 +83,9 @@ public class ViewCanvas extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        for (Linha l : linhas) {
+            l.desenharLinha(canvas);
+        }
         linha.desenharLinha(canvas);
     }
 
